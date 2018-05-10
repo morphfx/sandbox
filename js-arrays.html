@@ -1,0 +1,41 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//<![CDATA[
+			var arrayCollection = {
+				set1: ["a1", "a2", "a3"],
+				set2: ["b1", "b2", "b3"]
+			};
+			
+			var array = arrayCollection['set1'];
+			
+			for( var i=0; i<array.length; i++ ) {
+				document.write(array[i]);
+				document.write('<br />');
+			}
+			// above outputs:
+			// a1
+			// a2
+			// a3
+			
+			document.write('<hr />');
+			
+			// The following is NOT to be used
+			// for(..in..) should only be used for iterating through
+			// properties of an object - the output may not be what 
+			// you'd expect
+			for(var arrayItem in array) {
+				document.write(arrayItem);
+				document.write('<br />');
+			}
+			// above outputs:
+			// 0
+			// 1
+			// 2
+			
+		//]]>
+		</script>
+	</body>
+</html>
